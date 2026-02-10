@@ -68,3 +68,34 @@ This is **not** an in-memory or single-node limiter — it is **distributed and 
 - Config-driven limits
 
 ---
+
+## Project Structure
+
+├── cmd/
+│ └── server/
+│ └── main.go
+├── api/
+│ └── handlers/
+│ └── handlers.go
+├── internal/
+│ ├── limiter/
+│ │ └── token_bucket.go
+│ ├── middleware/
+│ │ └── rate_limiter.go
+│ ├── redis/
+│ │ ├── client.go
+│ │ └── lua/
+│ │ ├── token_bucket.lua
+│ │ └── loader.go
+│ ├── metrics/
+│ │ └── metrics.go
+│ └── config/
+│ ├── config.go
+│ └── loader.go
+├── configs/
+│ └── rate_limits.yaml
+├── docker/
+│ └── docker-compose.yml
+├── go.mod
+└── README.md
+
