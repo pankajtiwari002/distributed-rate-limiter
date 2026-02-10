@@ -1,0 +1,10 @@
+mode: fail-closed
+
+limits:
+  /api/login:
+    capacity: 5
+    refill_rate: 0.1
+
+  /api/search:
+    capacity: 100
+    refill_rate: 2
